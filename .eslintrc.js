@@ -25,6 +25,7 @@ module.exports = {
   },
   rules: {
     // 可以在这里自定义规则
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    '@typescript-eslint/ no-unused-vars': false
   }
 }
