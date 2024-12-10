@@ -3,6 +3,7 @@ import { SafeAreaView, View, StyleSheet } from 'react-native'
 import LoginInput from '../../components/LoginInput'
 import ConfirmButton from '../../components/ConfirmButton'
 import Tips from '../../components/Tips'
+import NavBar from '../../components/NavBar'
 
 const LoginPage = () => {
   const [username, setUsername] = useState('')
@@ -14,6 +15,10 @@ const LoginPage = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <NavBar title="登录" rightTitle="注册" />
+
+      <View style={styles.line} />
+
       <View style={styles.content}>
         <LoginInput
           label="用户名"
@@ -46,6 +51,10 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     backgroundColor: '#f1f5f6',
     flexGrow: 1
+  },
+  line: {
+    height: 0.5,
+    backgroundColor: '#d0d4d4'
   }
 })
 
